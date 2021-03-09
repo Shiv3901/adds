@@ -13,6 +13,24 @@ int main() {
 	player* human = new human_player;
 	player* computer = new computer_player;
 
+	cout << "\n\nWelcome to Rock, Paper, Scissor game !!\n";
+
+
+	string name;
+	cout << "Enter your player name: ";
+	cin >> name;
+	
+	human->setName(name);
+	computer->setName("computer");
+
+	player* winner = Ref.judge(human, computer);
+
+	if (winner == nullptr) 
+		cout << "\nIt's a draw\n";
+		return 0;
+
+	cout << "\nWinner is " << winner->getName() << "\n\n";
+
 	return 0;
 
 }
