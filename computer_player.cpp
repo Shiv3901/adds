@@ -1,4 +1,4 @@
-#include "computer_player"
+#include "computer_player.h"
 #include <string>
 #include <stdio.h>
 #include <stdlib.h>

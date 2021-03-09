@@ -22,6 +22,6 @@ std::string human_player::getChoice() {
 
 	}
 
-	return choice 
+	return choice ;
 
 }
