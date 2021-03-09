@@ -4,10 +4,6 @@
 
 using namespace std;
 
-referee::referee() {
-
-}
-
 player* referee::judge(player* p1, player* p2) {
 
 	string play1 = p1->getChoice();

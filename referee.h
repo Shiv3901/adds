@@ -9,7 +9,7 @@ private:
 	std::string decide(std::string p1, std::string p2);
 
 public:
-	referee();
+//	referee();
 	player* judge(player* p1, player* p2);
 
 };
