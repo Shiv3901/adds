@@ -15,7 +15,7 @@ std::string human_player::getChoice() {
 			break;
 		}
 
-		std::cout << "\nIncorrect value (Renter): ";
+		std::cout << "\nIncorrect value (Re-enter): ";
 		std::cin >> choice;
 
 		std::cout << "\n";
