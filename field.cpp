@@ -19,12 +19,14 @@ int main() {
 	string name;
 	cout << "Enter your player name: ";
 	cin >> name;
+	cout << endl;
 	
 	human->setName(name);
 	computer->setName("computer");
 
 	player* winner = Ref.judge(human, computer);
 
+	cout << "sdg";
 	if (winner == nullptr) 
 		cout << "\nIt's a draw\n";
 		return 0;

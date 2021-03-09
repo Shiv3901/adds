@@ -1,5 +1,6 @@
 #include "referee.h"
 #include <string>
+#include <iostream>
 
 using namespace std;
 
@@ -14,6 +15,7 @@ player* referee::judge(player* p1, player* p2) {
 
 	string winner = referee::decide(play1, play2);
 
+	cout << "It is still here";
 
 	if (winner == play1) 
 		return p1;
