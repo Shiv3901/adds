@@ -26,10 +26,10 @@ int main() {
 
 	player* winner = Ref.judge(human, computer);
 
-	cout << "sdg";
-	if (winner == nullptr) 
+	if (winner == nullptr) {
 		cout << "\nIt's a draw\n";
 		return 0;
+	}
 
 	cout << "\nWinner is " << winner->getName() << "\n\n";
 
