@@ -1,8 +1,8 @@
-#include "human_player.h"
+#include "Human.h"
 #include <string>
 #include <iostream>
 
-std::string human_player::getChoice() {
+std::string Human::getChoice() {
 	
 	std::string choice;
 

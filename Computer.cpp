@@ -1,10 +1,10 @@
-#include "computer_player.h"
+#include "Computer.h"
 #include <string>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
-std::string computer_player::getChoice() {
+std::string Computer::getChoice() {
 
 	std::string choice;
 

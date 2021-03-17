@@ -1,9 +1,9 @@
-#ifndef HUMAN_PLAYER_H
-#define HUMAN_PLAYER_H
+#ifndef HUMAN_H
+#define HUMAN_H
 #include <string>
 #include "player.h"
 
-class human_player: public player {
+class Human: public player {
 
 public:
 	std::string getChoice();

@@ -1,9 +1,9 @@
-#ifndef COMPUTER_PLAYER_H
-#define COMPUTER_PLAYER_H
+#ifndef COMPUTER_H
+#define COMPUTER_H
 #include <string>
 #include "player.h"
 
-class computer_player: public player {
+class Computer: public player {
 
 public:
 	virtual std::string getChoice();
