@@ -2,6 +2,6 @@
 
 vector<char> Player::get_move() {
 
-	return move;
+	return moves;
 	
 }
