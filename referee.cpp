@@ -1,15 +1,15 @@
-#include "referee.h"
+#include "Referee.h"
 #include <string>
 #include <iostream>
 
 using namespace std;
 
-player* referee::judge(player* p1, player* p2) {
+player* Referee::judge(player* p1, player* p2) {
 
 	string play1 = p1->getChoice();
 	string play2 = p2->getChoice();
 
-	string winner = referee::decide(play1, play2);
+	string winner = Referee::decide(play1, play2);
 
 	//cout << play1 << "  " << play2 << endl;
 	//cout << winner << endl;
@@ -23,7 +23,7 @@ player* referee::judge(player* p1, player* p2) {
 
 }
 
-std::string referee::decide(std::string p1, std::string p2) {
+std::string Referee::decide(std::string p1, std::string p2) {
 
 	if (p1 == p2)
 		return "";

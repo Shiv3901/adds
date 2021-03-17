@@ -9,7 +9,7 @@ class RandomComputer : public Computer {
 public: 
 	virtual std::string getChoice();
 
-}
+};
 
 #endif
 

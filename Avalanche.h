@@ -8,7 +8,7 @@ class Avalanche : public Computer {
 public:
 	virtual std::string getChoice();
 
-}
+};
 
 #endif
 
