@@ -1,7 +1,7 @@
 #ifndef REFEREE_H
 #define REFEREE_H
 #include <string>
-#include "Player.h"
+#include "player.h"
 
 class referee {
 

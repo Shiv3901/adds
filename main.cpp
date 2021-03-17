@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include "Tournament.h"
-#include "Player.h"
+#include "player.h"
 
 int main() {
 
