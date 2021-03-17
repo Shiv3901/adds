@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#include "player.h"
+#include "Player.h"
 
 class Computer : public Player {
 
