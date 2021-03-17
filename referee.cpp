@@ -1,15 +1,16 @@
 #include "referee.h"
+using namespace std;
 
-Player* referee::judge(Player* player1, Player8 player2) {
+Player* referee::judge(Player* player1, Player* player2) {
 
 	int count[2] = {0};
 
-	vector<int> play1 = player1->get_move();
-	vector<int> play2 = player2->get_move();
+	vector<char> play1 = player1->get_move();
+	vector<char> play2 = player2->get_move();
 
 	for (int i = 0 ; i < 5 ; i++) {
 
-		switch(check(play1, play2)) {
+		switch(check(play1[i], play2[i])) {
 
 			case 1:
 				count[0]++;
@@ -22,14 +23,14 @@ Player* referee::judge(Player* player1, Player8 player2) {
 
 	}
 
-	if (count[0] < coutn[1])
-		return second;
+	if (count[0] < count[1])
+		return player2;
 
-	return first;
+	return player1;
 
 }
 
-int referee:check(char f, char s) {
+int referee::check(char f, char s) {
 
 	if (f == s)
 		return 0;

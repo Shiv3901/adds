@@ -1,3 +1,3 @@
 #include "PaperDoll.h"
 
-PaperDoll::PaperDoll : Computer('P','S','S') {}
+PaperDoll::PaperDoll() : Computer('P','S','S') {}

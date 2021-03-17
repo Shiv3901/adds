@@ -3,7 +3,6 @@
 
 #include <vector>
 #include <stdlib.h>
-#include <cstdlib.h>
 #include <time.h>
 
 #include "Player.h"
@@ -11,7 +10,8 @@
 class Computer : public Player {
 
 private:
-	vector<char> move;
+	std::vector<char> move;
+	char pick_one();
 public:
 	Computer();
 	Computer(char move_1, char move_2, char move_3);

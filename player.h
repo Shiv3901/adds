@@ -6,9 +6,9 @@
 class Player {
 
 protected:
-	vector<char> moves;
+	std::vector<char> moves;
 public: 
-	vector<char> get_move();
+	std::vector<char> get_move();
 
 };
 

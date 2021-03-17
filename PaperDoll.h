@@ -7,7 +7,7 @@ class PaperDoll : public Computer {
 public:
 	PaperDoll();
 
-}
+};
 
 #endif
 

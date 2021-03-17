@@ -1,3 +1,3 @@
 #include "FistfullODollars.h"
 
-FistfullODollars::FistfullODollars : Computer('R','P','P') {}
+FistfullODollars::FistfullODollars() : Computer('R','P','P') {}

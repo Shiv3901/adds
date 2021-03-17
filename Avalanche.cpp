@@ -1,3 +1,4 @@
 #include "Avalanche.h"
 
-Avalanche::Avalanche : Computer('R', 'R', 'R') {}
+Avalanche::Avalanche():Computer('R', 'R', 'R') {
+}

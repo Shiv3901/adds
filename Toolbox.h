@@ -7,7 +7,7 @@ class Toolbox : public Computer {
 public:
 	Toolbox();
 
-}
+};
 
 #endif
 

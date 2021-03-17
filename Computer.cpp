@@ -4,7 +4,7 @@ Computer::Computer() {
 
 	for (int i = 0 ; i < 5 ; i++) {
 
-		char pick = Computer::pick_one();
+		char pick = pick_one();
 		move.push_back(pick);
 		moves.push_back(pick);
 
@@ -28,6 +28,8 @@ char Computer::pick_one() {
 			break;
 
 	}
+
+	return 'R';
 
 }
 

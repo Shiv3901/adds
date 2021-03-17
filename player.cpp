@@ -1,6 +1,6 @@
 #include "Player.h"
 
-vector<char> Player::get_move() {
+std::vector<char> Player::get_move() {
 
 	return moves;
 	
