@@ -3,13 +3,13 @@
 
 class Transport {
 
-protected:
-	int travelledDist;
+	protected:
+		int travelledDist;
 
-public:
-	Transport();
-	int get_dist_travelled();
-	virtual void go() = 0;
+	public:
+		Transport();
+		int get_dist_travelled();
+		virtual void go() = 0;
 
 };
 

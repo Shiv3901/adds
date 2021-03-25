@@ -5,8 +5,8 @@
 
 class Horse : public Transport {
 
-public:
-	virtual void go();
+	public:
+		virtual void go();
 
 };
 

@@ -7,8 +7,10 @@ using namespace std;
 
 int main() {
 
+	//Polymorphism implemented
 	Transport* horse = new Horse();
 
+	//Testing
 	cout << "Expected: 0" << endl;
 	cout << "Current travel: " << horse->get_dist_travelled() << endl;
 	horse->go();
