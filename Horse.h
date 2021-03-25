@@ -6,6 +6,7 @@
 class Horse : public Transport {
 
 	public:
+		Horse();
 		virtual void go();
 
 };

@@ -1,5 +1,5 @@
 all: Transport.o Horse.o main.o
-	g++ Transport.o Horse.o main.o -o play
+	g++ Transport.o Horse.o main.o -o play1
 
 Transport.o: Transport.cpp Transport.h
 	g++ -c Transport.cpp -o Transport.o
@@ -10,8 +10,8 @@ Horse.o: Horse.cpp Horse.h
 main.o: main.cpp
 	g++ -c main.cpp -o main.o
 
-play: 
-	./play
+play: play1
+	./play1
 
 clean: 
-	rm play
+	rm play1
