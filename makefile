@@ -14,4 +14,4 @@ play: play1
 	./play1
 
 clean: 
-	rm play1
+	rm play1 Transport.o Horse.o main.o
