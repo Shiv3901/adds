@@ -4,7 +4,7 @@ Truckloads::Truckloads() {
 
 }
 
-int Truckloads::numTrucks() {
+int Truckloads::numTrucks(int n1, int n2) {
 
 	return 0;
 

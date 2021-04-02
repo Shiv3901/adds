@@ -5,7 +5,7 @@ class Truckloads {
 
 	public:
 		Truckloads();
-		int numTrucks();
+		virtual int numTrucks(int n1, int n2);
 
 };
 
