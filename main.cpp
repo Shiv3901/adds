@@ -13,11 +13,11 @@ int main() {
 
 	cout << guy.reverseDigit(543273) << endl;
 
-	cout << guy.reverseString("SHivam") << endl;
+	cout << guy.reverseString("Shivam") << endl;
 
-	Truckloads r;
+	EfficientTruckloads r;
 
-	cout << r.numTrucks(8,3) << endl;
+	cout << r.numTrucks(10,5) << endl;
 
 	return 0;
 

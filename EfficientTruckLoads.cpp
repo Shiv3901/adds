@@ -2,6 +2,9 @@
 
 EfficientTruckloads::EfficientTruckloads() {
 	count = 0;
+    for (int i = 0 ; i < 10001 ; i++) {
+        dp[i] = 0;
+    }
 }
 
 int EfficientTruckloads::numTrucks(int n1, int n2) {
