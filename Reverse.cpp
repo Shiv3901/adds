@@ -24,6 +24,10 @@ int Reverse::reverseDigit(int value) {
 
 string Reverse::reverseString(string letters) {
 
-	return "";
+	if (letters.length() == 1) {
+		return letters;
+	} 
+	
+	return ( reverseString(letters.substr(1, letters.length())) + letters[0] );
 
 }
