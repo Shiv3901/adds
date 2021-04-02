@@ -9,7 +9,7 @@ EfficientTruckloads::EfficientTruckloads() {
 
 int EfficientTruckloads::numTrucks(int n1, int n2) {
     
-    if ( (n1 < 2 ) || (n2 < 1) ) {
+    if ( (n1 < 1 ) || (n2 < 1) ) {
         return -1;
     }
     
