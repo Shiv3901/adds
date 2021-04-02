@@ -1,9 +1,11 @@
 #ifndef EFFICIENTTRUCKLOADS_H
 #define EFFICIENTTRUCKLOADS_H
 
-#include "TruckLoads.h"
+class EfficientTruckloads {
 
-class EfficientTruckloads : public Truckloads {
+	private:
+		int count;
+		int dp[10001];
 
 	public:
 		EfficientTruckloads();

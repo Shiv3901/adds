@@ -1,10 +1,8 @@
 #include "TruckLoads.h"
 
 Truckloads::Truckloads() {
-	
+	count = 0;	
 }
-
-int count = 0;
 
 int Truckloads::numTrucks(int n1, int n2) {
 
