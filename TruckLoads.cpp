@@ -7,7 +7,7 @@ Truckloads::Truckloads() {
 int Truckloads::numTrucks(int n1, int n2) {
 
 	if (count == 0) {
-		if ( (n1 < 2 || n1 > 10000) || (n2 < 1 || n2 > n1 - 1) ) {
+		if ( (n1 < 2) || (n2 < 1) ) {
 			return -1;
 		}
 		count++;
