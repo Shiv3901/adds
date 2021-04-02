@@ -2,6 +2,8 @@
 #define TRUCKLOADS_H
 
 class Truckloads {
+	private:
+		int count;
 
 	public:
 		Truckloads();
