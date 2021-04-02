@@ -1,6 +1,6 @@
 #include "EfficientTruckLoads.h"
 
-EfficientTruckloads::EfficientTrucloads() {
+EfficientTruckloads::EfficientTruckloads() {
 
 
 }
