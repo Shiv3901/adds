@@ -1,8 +1,10 @@
 #include "TruckLoads.h"
 
 Truckloads::Truckloads() {
-	count = 0;
+	
 }
+
+int count = 0;
 
 int Truckloads::numTrucks(int n1, int n2) {
 
@@ -13,7 +15,7 @@ int Truckloads::numTrucks(int n1, int n2) {
 		count++;
 	}
 
-	if (n1 == n2) 
+	if (n1 <= n2) 
 		return 1;
 
 	if (n1 % 2 == 0) return 2*numTrucks(n1/2, n2);
