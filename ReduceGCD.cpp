@@ -5,9 +5,16 @@ ReduceGCD::ReduceGCD() {}
 
 int ReduceGCD::binaryOperator(int x, int y) {
 	
-	if (x == 0) 
-		return y;
+	while (x != y) {
 
-	return binaryOperator(x, x % y);
+		if (x > y) {
+			x -= y;
+		} else {
+			y -= x;
+		}
+
+	}
+
+	return x;
 
 }

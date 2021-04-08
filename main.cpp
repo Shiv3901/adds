@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include <string>
+#include <sstream>
 
 using namespace std;
 
@@ -17,31 +19,60 @@ using namespace std;
 #include "ReduceMinimum.h"
 #include "ReduceGCD.h"
 
+void printVec(vector<int> input)
+{
+	for (int i = 0; i < input.size(); i++) {
+		cout << input[i] << " ";
+	}
+
+	cout << "\n\n";
+}
+
+vector<int> result;
+
 int main() {
 
-	vector<int> ints;
+	string statement;
+	getline(cin, statement);
+	stringstream geek(statement);
 
-	ints.push_back(-10);
-	ints.push_back(2);
-	ints.push_back(-3);
-	ints.push_back(5);
-	ints.push_back(44);
+	while (geek) {
+		int number;
+		char dump;
 
-	MapGeneric* MAP = new MapAbsoluteValue;
+		geek >> number;
+		result.push_back(number);
 
-	vector<int> fg = MAP->map(ints);
+		geek >> dump;
+	}
 
-	cout << fg[2] << "\n";
+	MapTriple obj1;
 
-	FilterGeneric* FIL = new FilterForTwoDigitPositive;
+	result = obj1.map(result);
 
-	vector<int> kl = FIL->filter(ints);
+	MapAbsoluteValue obj2;
+	
+	result = obj2.map(result);
 
-	cout << kl[0] << "\n";
+	printVec(result);
 
-	ReduceGeneric* RED = new ReduceGCD;
+	FilterGeneric* obj3 = new FilterOdd;
 
-	cout << RED->reduce(ints) << endl;
+	result = obj3->filter(result);
+
+	FilterGeneric* obj4 = new FilterForTwoDigitPositive;
+
+	result = obj4->filter(result);
+
+	printVec(result);
+
+	ReduceGeneric* obj5 = new ReduceMinimum;
+
+	cout << obj5->reduce(result) << " ";
+
+	ReduceGeneric* obj6 = new ReduceGCD;
+
+	cout << obj6->reduce(result) << endl;
 
 	return 0;
 

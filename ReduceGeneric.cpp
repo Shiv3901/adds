@@ -5,14 +5,11 @@ ReduceGeneric::ReduceGeneric() {}
 
 int ReduceGeneric::reduce(vector<int> list) {
 
-	static int index = list.size() - 1;
-	static int answer = list[0];
-
-	if (index < 0) {
-		return answer;
+	if (list.size() == 1) {
+		return list[0];
 	} else {
-		answer = binaryOperator(answer, list[index]);
-		index--;
+		list[0] = binaryOperator(list[0], list[1]);
+		list.erase(list.begin() + 1);
 		return reduce(list);
 	}
 

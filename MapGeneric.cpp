@@ -8,7 +8,9 @@ vector<int> MapGeneric::map(vector<int> list) {
 
 	static int index = list.size() - 1;
 
+
 	if (index < 0 ) {
+		index = list.size() - 1;
 		return list;
 	} else {
 		list[index] = f(list[index]);

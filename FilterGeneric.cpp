@@ -7,17 +7,14 @@ FilterGeneric::FilterGeneric() {}
 vector<int> FilterGeneric::filter(vector<int> list) {
 
 	static int index = 0;
-	static vector<int> newList;
 
-	cout << index << endl;
-
-	if (index == list.size()) {
-		cout << "ghe";
-		return newList;
+	if (index == int(list.size())) {
+		index = 0;
+		return list;
 	} else {
-		cout << "ind: " << index << endl;
-		if(g(list[index]) == true) {
-			newList.push_back(list[index]);
+		if(g(list[index]) == false) {
+			list.erase(list.begin() + index);
+			index--;
 		}
 		index++;
 		return filter(list);
