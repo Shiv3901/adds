@@ -54,7 +54,7 @@ int main() {
 	
 	result = obj2.map(result);
 
-	printVec(result);
+	//printVec(result);
 
 	FilterGeneric* obj3 = new FilterOdd;
 
@@ -64,7 +64,7 @@ int main() {
 
 	result = obj4->filter(result);
 
-	printVec(result);
+	//printVec(result);
 
 	ReduceGeneric* obj5 = new ReduceMinimum;
 
@@ -72,7 +72,7 @@ int main() {
 
 	ReduceGeneric* obj6 = new ReduceGCD;
 
-	cout << obj6->reduce(result) << endl;
+	cout << obj6->reduce(result);
 
 	return 0;
 
