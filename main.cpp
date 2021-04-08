@@ -21,7 +21,7 @@ using namespace std;
 
 void printVec(vector<int> input)
 {
-	for (int i = 0; i < input.size(); i++) {
+	for (int i = 0; i < int(input.size()); i++) {
 		cout << input[i] << " ";
 	}
 
