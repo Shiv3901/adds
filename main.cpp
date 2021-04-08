@@ -13,6 +13,10 @@ using namespace std;
 #include "FilterNonPositive.h"
 #include "FilterForTwoDigitPositive.h"
 
+#include "ReduceGeneric.h"
+#include "ReduceMinimum.h"
+#include "ReduceGCD.h"
+
 int main() {
 
 	vector<int> ints;
@@ -33,9 +37,11 @@ int main() {
 
 	vector<int> kl = FIL->filter(ints);
 
-	cout << "df";
-
 	cout << kl[0] << "\n";
+
+	ReduceGeneric* RED = new ReduceGCD;
+
+	cout << RED->reduce(ints) << endl;
 
 	return 0;
 
