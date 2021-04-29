@@ -1,5 +1,6 @@
 #include "Individual.h"
 using namespace std;
+#include <iostream>
 
 
 string Individual::getString() {
@@ -14,11 +15,16 @@ int Individual::getBit(int pos) {
 		
 void Individual::flipBit(int pos) {
 
-	if (binaryString[pos]) {
+	//cout << binaryString << "0 "; 
+
+	if (binaryString[pos] == '1') {
+		//cout << "Shiv : " << binaryString << " : ";
 		binaryString[pos] = '0';
 	} else {
 		binaryString[pos] = '1';
 	}
+
+	//cout << " o n " << binaryString << " u ";
 
 }
 		

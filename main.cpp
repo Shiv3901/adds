@@ -53,8 +53,10 @@ int main() {
 	
 	cout << object2->getString() << " ";
 	
-	cout << object2->getMaxOnes() << " ";
+	//cout << "som";
 
+	cout << object2->getMaxOnes() << " ";
+	
 	return 0;
 
 }
