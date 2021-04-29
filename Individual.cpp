@@ -38,6 +38,8 @@ int Individual::getMaxOnes() {
 
 	}
 
+	ans = max(ans, temp);
+
 	return ans;
 
 }
