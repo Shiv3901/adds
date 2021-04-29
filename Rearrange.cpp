@@ -7,9 +7,9 @@ Individual Rearrange::mutate(Individual indi, int k) {
 
 	string curr = indi.getString();
 	int len = curr.length();
+	k--;
 	k %= curr.length();
 
-	k--;
 
 	Individual newIndi(curr.substr(k, len-k) + curr.substr(0, k)); 
 
