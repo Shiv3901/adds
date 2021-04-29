@@ -27,7 +27,7 @@ int Individual::getMaxOnes() {
 	int ans = 0;
 	int temp = 0;
 
-	for (int i = 0 ; i < binaryString.length() ; i++) {
+	for (int i = 0 ; i < (int) binaryString.length() ; i++) {
 
 		if (binaryString[i] != '1') {
 			ans = max(ans, temp);
