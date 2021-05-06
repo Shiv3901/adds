@@ -8,8 +8,9 @@ int sumOfSquare(int n, int base=0) {
 
 	//base case 
 	if (n <= 0) {
-		return base; //when n == 0, base will return 0, and then the addition of square 
-		//starts, also it will make sure to return 0 for all the negative numbers as well
+		return base; //when n == 0, base will return 0, and 
+		//then the addition of square starts, also it will 
+		//make sure to return 0 for all the negative numbers as well
 	}
 
 	//tail recursive call for the function

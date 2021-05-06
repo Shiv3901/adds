@@ -8,7 +8,8 @@ int sumOfSquare(int n) {
 	//base case 
 	if (n <= 0) {
 		return 0; //reason being it will return 0 for negative inputs as well
-		//and after returning 0, the recursion starts at i from 1 to n adding squares
+		//and after returning 0, the recursion starts 
+		//at i from 1 to n adding squares
 	}
 
 	//non-tail recursive call for the function
