@@ -1,44 +1,54 @@
 #include "QuickSort.h"
+#include <iostream>
 using namespace std;
 
 QuickSort::QuickSort() {}
 
 int QuickSort::partition(vector<int>& vec, int left, int right) {
 
-	int pivot;
+	int pi;
 	if ((right - left) > 2)
-		pivot = vec[2];
+		pi = 2;
 	else
-		pivot = vec[left + (right-left) / 2];
+		pi = left + (right-left) / 2;
 
+	int pivotValue = vec[pi];
 	int i = left;
-	int j = right;
-	int temp;
 
-	while (i <= j) {
-		while (vec[i] < pivot) i++;
-		while (vec[j] > pivot) j--;
+	for (int j = left; j < right + 1 ; j++) {
 
-		if (i <= j) {
-			temp = vec[j];
+		if (vec[j] <= pivotValue) {
+			int temp = vec[j];
 			vec[j] = vec[i];
 			vec[i] = temp;
-			j--;
 			i++;
 		}
+
 	}
 
-	return i;
+	int tar = left; 
+
+	for (int j = left ; j < right + 1 ; j++) {
+		if (vec[j] == pivotValue)
+			tar = j;
+	}
+
+	int temp = vec[i-1];
+	vec[i-1] = vec[tar];
+	vec[tar] = temp;
+	
+	return i-1;
 
 }
 
 void QuickSort::helper(vector<int>& vec, int left, int right) {
 
 	if (left < right) {
-	
+
 		int pivot = partition(vec, left, right);
-		helper(vec, left, pivot-1);
-		helper(vec, pivot, right);
+		helper(vec, left, pivot - 1);
+		helper(vec, pivot + 1, right);
+	
 
 	}
 

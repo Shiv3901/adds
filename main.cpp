@@ -27,10 +27,13 @@ int main() {
     while (iss >> data)
           new_vec.push_back(data);
 
+//	for (auto ele: new_vec) 
+//		cout << ele << " ";
+
 	//while (s >> temp) {
 	//	new_vec.push_back(temp);
 	//}
-	cout << "eg";
+	//cout << "eg";
 
 	QuickSort quick;
 	quick.sort(new_vec);
