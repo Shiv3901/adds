@@ -1,5 +1,7 @@
 #include <string>
+#include <sstream>
 #include <iostream>
+#include <vector>
 
 #include "QuickSort.h"
 #include "BubbleSort.h"
@@ -10,19 +12,32 @@ using namespace std;
 int main() {
 
 	vector<int> new_vec;
+	/*
+	int temp;
 
-	string in;
-	getline(cin, in);
+	string input;
+	getline(std::cin, input);
+	istringstream s(input);
+	*/
 
-	istringstream s(in);
+    std::string buffer;
+    int data;
+    std::getline(std::cin, buffer);
+    std::istringstream iss(buffer);
+    while (iss >> data)
+          new_vec.push_back(data);
 
-	int var;
-	while (s >> var) new_vec.push_back();
+	//while (s >> temp) {
+	//	new_vec.push_back(temp);
+	//}
+	cout << "eg";
 
 	QuickSort quick;
-	quick.sort(B);
+	quick.sort(new_vec);
 
-	int idx = RecursiveBinarySearch.search(B, 1);
+	RecursiveBinarySearch recur;
+
+	int idx = recur.search(new_vec, 1);
 
 	if (idx == false) cout << "false" << " ";
 	

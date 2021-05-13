@@ -3,7 +3,7 @@ using namespace std;
 
 BubbleSort::BubbleSort() {}
 
-vector<int> BubbleSort::sort(vector<int> list) {
+vector<int> BubbleSort::sort(vector<int>& list) {
 
 	for (int i = 0 ; i < list.size() ; i++) {
 
@@ -19,6 +19,6 @@ vector<int> BubbleSort::sort(vector<int> list) {
 
 	}
 
-	return vec;
+	return list;
 
 }

@@ -1,4 +1,4 @@
-#include "BubbleSort"
+#include "QuickSort.h"
 using namespace std;
 
 QuickSort::QuickSort() {}
@@ -44,8 +44,9 @@ void QuickSort::helper(vector<int>& vec, int left, int right) {
 
 }
 
-vector<int> QuickSort::sort(vector<int> list) {
+vector<int> QuickSort::sort(vector<int>& list) {
 
 	helper(list, 0, list.size()-1);	
-
+	
+	return list;
 }

@@ -6,9 +6,9 @@ class QuickSort {
 
 	public:
 		QuickSort();
-		int partition(std::vector<int>, int left, int right);
+		int partition(std::vector<int>& vec, int left, int right);
 		void helper(std::vector<int>& vec, int left, int right);
-		std::vector<int> sort(std::vector<int> list);
+		std::vector<int> sort(std::vector<int>& list);
 
 };
 
