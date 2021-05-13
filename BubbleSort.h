@@ -6,7 +6,8 @@ class BubbleSort {
 
 	public:
 		BubbleSort();
-		std::vector<int> sort(std::vector<int> list);
+		int partition(std::vector<int>& vec, int left, int right);	
+		std::vector<int> sort(std::vector<int>& list);
 
 };
 

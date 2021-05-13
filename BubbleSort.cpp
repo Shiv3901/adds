@@ -3,16 +3,16 @@ using namespace std;
 
 BubbleSort::BubbleSort() {}
 
-vector<int> BubbleSort::sort(vector<int> vec) {
+vector<int> BubbleSort::sort(vector<int> list) {
 
-	for (int i = 0 ; i < vec.size() ; i++) {
+	for (int i = 0 ; i < list.size() ; i++) {
 
-		for (int j = 0 ; j < vec.size()-i-1 ; j++) {
+		for (int j = 0 ; j < list.size()-i-1 ; j++) {
 
-			if (vec[j] > vec[j+1]) {
-				int temp = vec[j];
-				vec[j] = vec[j+1];
-				vec[j+1] = temp;
+			if (list[j] > list[j+1]) {
+				int temp = list[j];
+				list[j] = list[j+1];
+				list[j+1] = temp;
 			}
 
 		}
