@@ -1,29 +1,30 @@
 #include <bits/stdc++.h>
+#include <string>
 #include "LinkedList.h"
-using namespace std;
+//using namespace std;
 
 static int array[1000];
 int size = 0;
 
 int param1;
 int param2;
-string something = "';
+std::string something = "";
 
-void add(string number) {
+void add(std::string number) {
 	array[size] = stoi(number);
 	size++;
 }
 
-void input(string userInput) {
+void input(std::string userInput) {
 
-	stringstream ss(userInput);
-	string t;
+	std::stringstream ss(userInput);
+	std::string t;
 
 	while (ss) {
 
 		ss >> t;
 
-		if (isDigit(t[0]) && something != "") {
+		if (isdigit(t[0]) && something != "") {
 	
 			param1 = stoi(t);
 			ss >> t;
@@ -46,40 +47,30 @@ void input(string userInput) {
 
 int main() {
 	
-	string temp;
-	getline(temp);
+	std::string temp;
+	getline(std::cin, temp);
 
-	input(enter);
+	input(temp);
 
 	LinkedList done(array, size);
 
-	switch (something) {
-	
-		case "AF":
+	if (something == "AF")
 			done.addFront(param1);
-			break;
-		case "AE":
+	else if (something == "AE")
 			done.addEnd(param1);
-			break;
-		case "AP":
+	else if (something == "AP")
 			done.addAtPosition(param1, param2);
-			break;
-		case "S":
+	else if (something == "S")
 			done.search(param1);
-			break;
-		case "DF":
+	else if (something == "DF")
 			done.deleteFront();
-			break;
-		case "DE":
+	else if (something == "DE")
 			done.deleteEnd();
-			break;
-		case "DP":
+	else if (something == "DP")
 			done.deletePosition(param1);
-			break;
-		case "GI":
+	else if (something == "GI")
 			done.getItem(param1);
-			break;
-	}
+			
 
 	done.printItems();
 

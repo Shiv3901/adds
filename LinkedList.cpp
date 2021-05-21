@@ -116,7 +116,7 @@ void LinkedList::deleteEnd() {
 
 	Node* secondLast = head;
 
-	while (secondLast->get_next(secondLast->get_next()) != nullptr) {
+	while (secondLast->get_next()->get_next() != nullptr) {
 		secondLast = secondLast->get_next();
 	}
 
@@ -140,7 +140,7 @@ void LinkedList::deletePosition(int position) {
 		while (temp->get_next() != nullptr) {
 
 			if (pos == position) {
-				Node* tail = temp->get_next(temp->get_next());
+				Node* tail = temp->get_next()->get_next();
 				delete temp->get_next();
 				head->set_next(tail);
 				break;
@@ -157,7 +157,7 @@ void LinkedList::deletePosition(int position) {
 
 }
 
-int LinkedList::getitem(int position) {
+int LinkedList::getItem(int position) {
 
 	int pos = 1;
 	Node* temp = head;
@@ -167,17 +167,17 @@ int LinkedList::getitem(int position) {
 		if (pos == position) {
 			break;
 		}
-		temp = temp.get_next();
+		temp = temp->get_next();
 		pos++;
 
 	}
 
 	if (pos != position) {
-		cout << std:numeric_limits<int>::max() << " ";
+		cout << std::numeric_limits<int>::max() << " ";
 		return std::numeric_limits<int>::max();
 	} else {
-		cout << temp.get_data() << " ";
-		return temp.get_data();
+		cout << temp->get_data() << " ";
+		return temp->get_data();
 	}
 
 }
@@ -188,8 +188,8 @@ void LinkedList::printItems() {
 	
 		Node* temp = head;
 		while (temp != nullptr) {
-			cout << temp.get_data() << " ";
-			temp = temp.get_next();
+			cout << temp->get_data() << " ";
+			temp = temp->get_next();
 		}
 
 	}
@@ -197,7 +197,7 @@ void LinkedList::printItems() {
 }
 
 
-~LinkedList::LinkedList() {
+LinkedList::~LinkedList() {
 
 	if (head != nullptr) {
 
@@ -206,7 +206,7 @@ void LinkedList::printItems() {
 
 		while (prev != nullptr) {
 			temp = prev;
-			prev = prev.get_next();
+			prev = prev->get_next();
 			delete temp;
 		}
 

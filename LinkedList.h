@@ -22,7 +22,7 @@ class LinkedList {
 		void deleteEnd();
 		void deletePosition(int position);
 
-		int getitem(int position);
+		int getItem(int position);
 
 		void printItems();
 
