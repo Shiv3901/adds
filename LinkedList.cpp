@@ -1,5 +1,6 @@
 #include "LinkedList.h"
 #include <bits/stdc++.h>
+using namespace std;
 
 LinkedList::LinkedList() {
 	head = nullptr;
@@ -20,7 +21,7 @@ void LinkedList::addFront(int newItem) {
 	if (head == nullptr) {
 		head = new Node(newItem);	
 	} else {
-		newHead = new Node(newItem);
+		Node* newHead = new Node(newItem);
 		newHead->set_next(head);
 		head = newhead;
 	}
@@ -30,13 +31,13 @@ void LinkedList::addFront(int newItem) {
 void LinkedList::addEnd(int newItem) {
 
 	if (head == nullptr) {
-		head = new Node(newitem);
+		head = new Node(newItem);
 	} else {
 
 		//traverse till the end of the list first
 		Node* temp = head;
 		while (temp->get_next() != nullptr) {
-			temp = temp->get_next;
+			temp = temp->get_next();
 		}
 		Node* newNode = new Node(newItem);
 		temp->set_next(newNode);
@@ -57,7 +58,7 @@ void LinkedList::addAtPosition(int position, int newItem) {
 		while (temp->get_next() != nullptr) {
 
 			if (pos == position) {
-				Node* newNode = new node(newItem);
+				Node* newNode = new Node(newItem);
 				Node* tempNext = temp->get_next();
 				newNode->set_next(tempNext);
 				temp->set_next(newNode);
