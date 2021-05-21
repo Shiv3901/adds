@@ -142,7 +142,7 @@ void LinkedList::deletePosition(int position) {
 			if (pos == position) {
 				Node* tail = temp->get_next()->get_next();
 				delete temp->get_next();
-				head->set_next(tail);
+				temp->set_next(tail);
 				break;
 			}
 			temp = temp->get_next();
