@@ -23,7 +23,7 @@ void LinkedList::addFront(int newItem) {
 	} else {
 		Node* newHead = new Node(newItem);
 		newHead->set_next(head);
-		head = newhead;
+		head = newHead;
 	}
 
 }
@@ -80,7 +80,7 @@ void LinkedList::addAtPosition(int position, int newItem) {
 
 int LinkedList::search(int item) {
 
-	int positon = 1;
+	int position = 1;
 	Node* temp = head;
 
 	while (temp != nullptr) {

@@ -7,22 +7,22 @@ Node::Node(int data) {
 
 }
 
-void set_data(int data) {
+void Node::set_data(int data) {
 
 	this->data = data;
 
 }
 
-int get_data() {
+int Node::get_data() {
 	return data;
 }
 
-void set_next(Node* next) {
+void Node::set_next(Node* next) {
 
 	this->next = next;
 
 }
 
-Node8 get_next() {
+Node* Node::get_next() {
 	return next;
 }
