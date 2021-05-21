@@ -86,7 +86,7 @@ int LinkedList::search(int item) {
 	while (temp != nullptr) {
 
 		if (temp->get_data() == item) {
-			cout << position < " ";
+			cout << position << " ";
 			return position;
 		}
 

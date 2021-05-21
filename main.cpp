@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#include <LinkedList.h>
+#include "LinkedList.h"
 using namespace std;
 
 static int array[1000];
