@@ -13,7 +13,7 @@ bool prefix::isoperand(char x) {
 
 }
 
-bool prefix::isoperand(char x) {
+bool prefix::isoperator(char x) {
 
 	return isdigit(x);
 
@@ -49,10 +49,10 @@ string prefix::calculateprefix(string input) {
 
 	stack<int> st;
 
-	for (int i = input.size - 1 ; i > -1 ; i--) {
+	for (int i = input.size() - 1 ; i > -1 ; i--) {
 
 		if (isoperand(input[i]))
-			stack.push_back(input[j] - '0');
+			stack.push_back(input[i] - '0');
 
 		else {
 
@@ -62,13 +62,13 @@ string prefix::calculateprefix(string input) {
 			st.pop();
 
 			if (input[i] == '+')
-				st.push_back(first + second);
+				st.push(first + second);
 			else if (input[i] == '-')
-				st.push_back(first - second);
+				st.push(first - second);
 			else if (input[i] == '*')
-				st.push_back(first * second);
+				st.push(first * second);
 			else
-				st.push_back(first / second);
+				st.push(first / second);
 
 		}
 
@@ -106,7 +106,7 @@ string prefix::convertinfix(string input) {
 		}
 
 		else 
-			st.push(string(1, input[i]));
+			st.push(string(1, input[j]));
 
 	}
 
@@ -116,7 +116,7 @@ string prefix::convertinfix(string input) {
 
 		string temp_2 = "";
 
-		for (int i = 1 ; i <= ans.size() -2 ; i++) 
+		for (int i = 1 ; i <= (int)(ans.size() -2) ; i++) 
 			temp_2.push_back(ans[i]);
 
 		return temp_2;

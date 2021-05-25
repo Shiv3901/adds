@@ -1,6 +1,7 @@
 #ifndef PREFIX_H
 #define PREFIX_H
 #include <string>
+#include <vector>
 
 class prefix {
 
