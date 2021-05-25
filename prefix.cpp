@@ -1,10 +1,12 @@
 #include "prefix.h"
 #include <string>
 #include <stack>
+#include <iostream>
+#include <ctype.h>
 
 using namespace std;
 
-bool prefix::isoperand(char x) {
+bool prefix::isoperator(char x) {
 
 	if ( x == '+' || x == '*' || x == '/' || x == '-') 
 		return true;
@@ -13,7 +15,7 @@ bool prefix::isoperand(char x) {
 
 }
 
-bool prefix::isoperator(char x) {
+bool prefix::isoperand(char x) {
 
 	return isdigit(x);
 
@@ -25,13 +27,13 @@ bool prefix::check(string input) {
 
 	vector<char> operandList;
 
-	for (auto i : input) {
+	for (int i = 0 ; i < input.size() ; i++) {
 
-		if (isoperator(i))
-			operatorList.push_back(i);
+		if (isoperator(input[i]))
+			operatorList.push_back(input[i]);
 
-		else if (isoperand(i))
-			operandList.push_back(i);
+		else if (isoperand(input[i]))
+			operandList.push_back(input[i]);
 
 		else 
 			return false;
@@ -73,7 +75,7 @@ string prefix::calculateprefix(string input) {
 		}
 
 	}
-
+	
 	return to_string(st.top());
 
 }
@@ -82,9 +84,9 @@ string prefix::convertinfix(string input) {
 
 	stack<string> st;
 
-	for (int j = input.size()-1 ; j > - 1 ; j--) {
+	for (int j = input.size()-1 ; j >= -0 ; j--) {
 
-		if (isoperand(input[j])) {
+		if (isoperator(input[j])) {
 
 			string first = st.top();
 			st.pop();
@@ -93,7 +95,7 @@ string prefix::convertinfix(string input) {
 
 			string t = "";
 
-			if ( (input[j] == '+' || input[j] == '-') && (input[j] == '*' || input[j] == '/') )
+			if ( (input[j] == '+' || input[j] == '-') && (input[j-1] == '*' || input[j-1] == '/') )
 			{
 				t = "(" + first + " " + input[j] + " " + second + ")";
 			}

@@ -2,6 +2,7 @@
 #define PREFIX_H
 #include <string>
 #include <vector>
+#include <bits/stdc++.h>
 
 class prefix {
 

@@ -1,3 +1,4 @@
+#include <bits/stdc++.h>
 #include <iostream>
 #include "prefix.h"
 
@@ -12,18 +13,18 @@ string remove_space(string inp) {
 }
 
 int main() {
-
-
+	
 	prefix h_stream;
 
 	string inp;
 
 	getline(cin, inp);
-
+	
 	inp = remove_space(inp);
-
-	if (h_stream.check(inp))
+	
+	if (h_stream.check(inp)) {
 		cout << h_stream.convertinfix(inp) << " = " << h_stream.calculateprefix(inp);
+	}
 	else {
 		cout << "Error";
 		return 0;
