@@ -23,7 +23,7 @@ int main() {
 	inp = remove_space(inp);
 
 	if (h_stream.check(inp))
-		cout << h_stream.convertinfix(inp) << " = " << h_stream.calculatorprefix(input);
+		cout << h_stream.convertinfix(inp) << " = " << h_stream.calculatorprefix(inp);
 	else {
 		cout << "Error";
 		return 0;

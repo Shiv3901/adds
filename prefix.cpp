@@ -6,7 +6,7 @@ using namespace std;
 
 bool prefix::isoperand(char x) {
 
-	if ( x == '+' || x == '*' || x == "/" || x == '-') 
+	if ( x == '+' || x == '*' || x == '/' || x == '-') 
 		return true;
 
 	return false;

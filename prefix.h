@@ -1,5 +1,6 @@
 #ifndef PREFIX_H
 #define PREFIX_H
+#include <string>
 
 class prefix {
 
@@ -11,11 +12,11 @@ class prefix {
 
 		bool isoperand(char c);
 
-		bool check(string input);
+		bool check(std::string input);
 
-		string calculateprefix(string input);
+		std::string calculateprefix(std::string input);
 
-		string convertinfix(string input);
+		std::string convertinfix(std::string input);
 
 };
 
