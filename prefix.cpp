@@ -52,7 +52,7 @@ string prefix::calculateprefix(string input) {
 	for (int i = input.size() - 1 ; i > -1 ; i--) {
 
 		if (isoperand(input[i]))
-			stack.push_back(input[i] - '0');
+			st.push(input[i] - '0');
 
 		else {
 
@@ -101,7 +101,7 @@ string prefix::convertinfix(string input) {
 			else  
 				t = first + " " + input[j] + " " + second;
 
-			st.push(t)
+			st.push(t);
 
 		}
 
