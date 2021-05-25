@@ -27,7 +27,7 @@ bool prefix::check(string input) {
 
 	vector<char> operandList;
 
-	for (int i = 0 ; i < input.size() ; i++) {
+	for (int i = 0 ; i < (int)(input.size()) ; i++) {
 
 		if (isoperator(input[i]))
 			operatorList.push_back(input[i]);
@@ -75,7 +75,7 @@ string prefix::calculateprefix(string input) {
 		}
 
 	}
-	
+
 	return to_string(st.top());
 
 }
